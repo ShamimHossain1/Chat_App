@@ -6,3 +6,12 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+img.dot{
+  width: 15px !important;
+}
+
