@@ -1,0 +1,179 @@
+.profile{
+    min-height: 100vh;
+    background: url(../../../public/assets/background.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-container{
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    border-radius: 24px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0, 16, 48, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+
+.profile-container h3{
+    color: #001030;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.profile-container::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #077eff, #00d4ff);
+    margin: 16px auto 32px;
+    border-radius: 2px;
+}
+
+.profile-container label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #4a5568;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 32px;
+}
+
+.profile-container label:hover {
+ 
+    color: #077eff;
+}
+
+.profile-container label img{
+   height: 100px;
+   width: 100px;
+    border-radius: 50%;
+    border: 3px solid #e2e8f0;
+    object-fit: cover;
+}
+.profile-container label:hover img {
+    border-color: #077eff;
+}
+
+.profile-container input[type="text"]{
+    width: 100%;
+    padding: 16px 20px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    color: #1a202c;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+}
+
+.profile-container input[type="text"]:focus {
+    border-color: #077eff;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(7, 126, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.profile-container input[type="text"]::placeholder{
+    color: #a0aec0;
+    font-weight: 400;
+}
+
+.profile-container textarea{
+    width: 100%;
+    padding: 16px 20px;
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    color: #1a202c;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    outline: none;
+    resize: none;
+    min-height: 100px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+.profile-container textarea:focus {
+    border-color: #077eff;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(7, 126, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+.profile-container textarea::placeholder{
+    color: #a0aec0;
+    font-weight: 400;
+}
+
+.profile-container button{
+    background: linear-gradient(135deg, #077eff 0%, #00d4ff 100%);
+    color: white;
+    border: none;
+    padding: 16px 48px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(7, 126, 255, 0.3);
+    letter-spacing: 0.3px;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-container button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(7, 126, 255, 0.4);
+}
+
+.profile-container button:hover::before {
+    opacity: 1;
+}
+
+.profile-container button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(7, 126, 255, 0.3);
+}
+
+.profile-container img:last-child{
+    margin-top: 24px;
+    max-width: 100px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.profile-container img:last-child:hover {
+    opacity: 0.8;
+}
